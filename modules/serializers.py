@@ -1,5 +1,4 @@
 from rest_framework import serializers
-
 from modules.models import Module, Lesson
 
 

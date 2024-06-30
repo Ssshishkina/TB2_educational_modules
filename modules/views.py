@@ -1,9 +1,9 @@
 from rest_framework import generics
 from rest_framework.permissions import IsAuthenticated
-from modules.models import Module, Lesson
-from modules.paginators import ModulePaginator, LessonPaginator
-from modules.permissions import IsOwner
-from modules.serializers import ModuleSerializer, LessonSerializer
+from .models import Module, Lesson
+from .paginators import ModulePaginator, LessonPaginator
+from .permissions import IsOwner
+from .serializers import ModuleSerializer, LessonSerializer
 
 
 class ModuleCreateAPIView(generics.CreateAPIView):
@@ -31,7 +31,7 @@ class ModuleListAPIView(generics.ListAPIView):
 
     def get_queryset(self):
         queryset = super().get_queryset()
-        queryset = queryset.filter(user=self.request.user)
+        queryset = queryset.filter(owner=self.request.user)
         return queryset
 
 
@@ -86,7 +86,7 @@ class LessonListAPIView(generics.ListAPIView):
 
     def get_queryset(self):
         queryset = super().get_queryset()
-        queryset = queryset.filter(user=self.request.user)
+        queryset = queryset.filter(owner=self.request.user)
         return queryset
 
 

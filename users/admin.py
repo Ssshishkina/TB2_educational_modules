@@ -1,7 +1,5 @@
 from django.contrib import admin
 
-from modules.models import Module, Lesson
+from .models import User
 
-admin.site.register(Module)
-
-admin.site.register(Lesson)
+admin.site.register(User)
