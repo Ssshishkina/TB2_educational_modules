@@ -1,0 +1,42 @@
+[
+  {
+    "model": "modules.module",
+    "pk": 1,
+    "fields": {
+      "title": "модуль 1",
+      "description": "описание",
+      "owner": 1
+    }
+  },
+  {
+    "model": "modules.module",
+    "pk": 2,
+    "fields": {
+      "title": "модуль 2",
+      "description": "описание",
+      "owner": 1
+    }
+  },
+  {
+    "model": "modules.lesson",
+    "pk": 1,
+    "fields": {
+      "title": "урок 1",
+      "body": "описание урока 1",
+      "video_url": null,
+      "module": 1,
+      "owner": 1
+    }
+  },
+  {
+    "model": "modules.lesson",
+    "pk": 2,
+    "fields": {
+      "title": "урок 2",
+      "body": "описание урока 2",
+      "video_url": null,
+      "module": 1,
+      "owner": 1
+    }
+  }
+]
