@@ -14,3 +14,7 @@
 * При помощи команды python manage.py runserver запустите проект
 * После успешного выполнения предыдущего шага, приложение будет доступно по адресу http://127.0.0.1:8000/
 * Для входа в админку испрользуйте данные CSU и пропишите в адресе http://127.0.0.1:8000/admin
+* Для получения фикстур с примерами данных использовать команды:
+  python -Xutf8 manage.py dumpdata users -o data_users.json
+  python -Xutf8 manage.py dumpdata modules -o data_module.json
+  python -Xutf8 manage.py dumpdata modules -o data_lesson.json
